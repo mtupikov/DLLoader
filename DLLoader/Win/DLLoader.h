@@ -32,8 +32,8 @@ public:
 
     template <typename... Args>
     std::shared_ptr<T> getInstance(Args... args) {
-        using Alloc = T* (*)();
-        using Delete = void(*)(T *);
+        using Alloc = typename T::allocator_t*;
+        using Delete = typename T::deleter_t*;
 
         auto allocFunction = reinterpret_cast<Alloc>(GetProcAddress(m_handle, this->m_allocSymbol.c_str()));
         auto deleteFunction = reinterpret_cast<Delete>(GetProcAddress(m_handle, this->m_deleteSymbol.c_str()));
