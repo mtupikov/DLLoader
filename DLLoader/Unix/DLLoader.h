@@ -18,7 +18,7 @@ public:
 
     ~DLLoader() override {
         closeLibrary();
-    };
+    }
 
     bool openLibrary() override {
         m_handle = dlopen(this->m_libraryPath.c_str(), RTLD_NOW | RTLD_LAZY);

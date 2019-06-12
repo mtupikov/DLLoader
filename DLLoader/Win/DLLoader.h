@@ -18,7 +18,7 @@ public:
 
     ~DLLoader() override {
         closeLibrary();
-    };
+    }
 
     bool openLibrary() override {
         m_handle = LoadLibrary(this->m_libraryPath.c_str());
