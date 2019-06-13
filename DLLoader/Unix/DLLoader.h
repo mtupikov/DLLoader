@@ -31,7 +31,7 @@ public:
     }
 
     template <typename... Args>
-    std::shared_ptr<T> getInstance() {
+    std::shared_ptr<T> getInstance(Args... args) {
         using Alloc = typename T::allocator_t*;
         using Delete = typename T::deleter_t*;
 
