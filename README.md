@@ -12,4 +12,4 @@ typedef void deleter_t(<InterfaceName>*);
 DLL must provide two functions with default (`allocator` and `deleter`) or specified by you names (see [TestLibrary.cpp](/TestLibrary/TestLibrary.cpp) for details). In case if you want to change names of these functions don't forget to specify them in `DLLoader` constructor (`m_allocSymbol` and `m_deleteSymbol`, see [IDLLoader.h](DLLoader/IDLLoader.h) for details).
 
 ## Test
-Just execute `build.sh` and launch `.exe` file.
+Just execute `build.sh` and launch binary file.
